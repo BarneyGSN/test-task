@@ -1,0 +1,225 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "zad_test/1.0.0": {
+        "dependencies": {
+          "LasSharp": "1.1.0",
+          "MathNet.Spatial": "0.6.0",
+          "System.CommandLine": "3.0.0-preview.5.26302.115",
+          "xunit": "2.9.3"
+        },
+        "runtime": {
+          "zad_test.dll": {}
+        }
+      },
+      "LasSharp/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/LasSharp.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "MathNet.Numerics/4.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "4.9.1.0",
+            "fileVersion": "4.9.1.0"
+          }
+        }
+      },
+      "MathNet.Spatial/0.6.0": {
+        "dependencies": {
+          "MathNet.Numerics": "4.9.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Spatial.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.6.0.0"
+          }
+        }
+      },
+      "System.CommandLine/3.0.0-preview.5.26302.115": {
+        "runtime": {
+          "lib/net10.0/System.CommandLine.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.26.30315"
+          }
+        },
+        "resources": {
+          "lib/net10.0/cs/System.CommandLine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net10.0/de/System.CommandLine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net10.0/es/System.CommandLine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net10.0/fr/System.CommandLine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net10.0/it/System.CommandLine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net10.0/ja/System.CommandLine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net10.0/ko/System.CommandLine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net10.0/pl/System.CommandLine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net10.0/pt-BR/System.CommandLine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net10.0/ru/System.CommandLine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net10.0/tr/System.CommandLine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net10.0/zh-Hans/System.CommandLine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net10.0/zh-Hant/System.CommandLine.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "xunit/2.9.3": {
+        "dependencies": {
+          "xunit.assert": "2.9.3",
+          "xunit.core": "2.9.3"
+        }
+      },
+      "xunit.abstractions/2.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.assert/2.9.3": {
+        "runtime": {
+          "lib/net6.0/xunit.assert.dll": {
+            "assemblyVersion": "2.9.3.0",
+            "fileVersion": "2.9.3.0"
+          }
+        }
+      },
+      "xunit.core/2.9.3": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.9.3",
+          "xunit.extensibility.execution": "2.9.3"
+        }
+      },
+      "xunit.extensibility.core/2.9.3": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.core.dll": {
+            "assemblyVersion": "2.9.3.0",
+            "fileVersion": "2.9.3.0"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.9.3": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.9.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "assemblyVersion": "2.9.3.0",
+            "fileVersion": "2.9.3.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "zad_test/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LasSharp/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ig/zCtjcErQF0WJjcApRJlCRMuWhRzeSdphXIyfl9yJcA8t+tGUJwVUxNqi9BGnhD4cYYGWCMV2S/Po7jrNTg==",
+      "path": "lassharp/1.1.0",
+      "hashPath": "lassharp.1.1.0.nupkg.sha512"
+    },
+    "MathNet.Numerics/4.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tLg/nvtdYd830Ee8nWsrsIiBTxeKmUEtsrQIPX4Sn60l7eMmZFIvSaMdG6o08FGsByi0TArJ6tx8LVT4vpWqyQ==",
+      "path": "mathnet.numerics/4.9.1",
+      "hashPath": "mathnet.numerics.4.9.1.nupkg.sha512"
+    },
+    "MathNet.Spatial/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-suGp382PvzFjgIGbF2ehv7NjoBt3ub4U2eZqhBpZkcc/FjQ9oDwUwKxO8eCxVgOHj2kMJn0Eh6Nnp+42JLSRwg==",
+      "path": "mathnet.spatial/0.6.0",
+      "hashPath": "mathnet.spatial.0.6.0.nupkg.sha512"
+    },
+    "System.CommandLine/3.0.0-preview.5.26302.115": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ltm4aNcEJFVMoOo8G9/Gs27K2VlIIBD7V3x6y8KDt49mL/EohwCgW1qyhnTivBoZievEG7KJYXFaCNm/ru4OqQ==",
+      "path": "system.commandline/3.0.0-preview.5.26302.115",
+      "hashPath": "system.commandline.3.0.0-preview.5.26302.115.nupkg.sha512"
+    },
+    "xunit/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TlXQBinK35LpOPKHAqbLY4xlEen9TBafjs0V5KnA4wZsoQLQJiirCR4CbIXvOH8NzkW4YeJKP5P/Bnrodm0h9Q==",
+      "path": "xunit/2.9.3",
+      "hashPath": "xunit.2.9.3.nupkg.sha512"
+    },
+    "xunit.abstractions/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "path": "xunit.abstractions/2.0.3",
+      "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
+    },
+    "xunit.assert/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Kq28fCE7MjOV42YLVRAJzRF0WmEqsmflm0cfpMjGtzQ2lR5mYVj1/i0Y8uDAOLczkL3/jArrwehfMD0YogMAA==",
+      "path": "xunit.assert/2.9.3",
+      "hashPath": "xunit.assert.2.9.3.nupkg.sha512"
+    },
+    "xunit.core/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiAEvqGvyme19wE0wTKdADH+NloYqikiU0mcnmiNyXaF9HyHmE6sr/3DC5vnBkgsWaE6yPyWszKSPSApWdRVeQ==",
+      "path": "xunit.core/2.9.3",
+      "hashPath": "xunit.core.2.9.3.nupkg.sha512"
+    },
+    "xunit.extensibility.core/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kf3si0YTn2a8J8eZNb+zFpwfoyvIrQ7ivNk5ZYA5yuYk1bEtMe4DxJ2CF/qsRgmEnDr7MnW1mxylBaHTZ4qErA==",
+      "path": "xunit.extensibility.core/2.9.3",
+      "hashPath": "xunit.extensibility.core.2.9.3.nupkg.sha512"
+    },
+    "xunit.extensibility.execution/2.9.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yMb6vMESlSrE3Wfj7V6cjQ3S4TXdXpRqYeNEI3zsX31uTsGMJjEw6oD5F5u1cHnMptjhEECnmZSsPxB6ChZHDQ==",
+      "path": "xunit.extensibility.execution/2.9.3",
+      "hashPath": "xunit.extensibility.execution.2.9.3.nupkg.sha512"
+    }
+  }
+}
