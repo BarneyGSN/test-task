@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using MathNet.Spatial.Euclidean;
 
 namespace zad_test.IO;
 using LasSharp;
@@ -15,7 +16,7 @@ public class LasReader
         while (reader.MoveToNextPoint())
         {
             lasPoint = reader.CurrentPoint;
-            yield return new Point3D((float)lasPoint.X, (float)lasPoint.Y, (float)lasPoint.Z);
+            yield return new Point3D(lasPoint.X, lasPoint.Y, lasPoint.Z);
         }
         reader.Close();
     }

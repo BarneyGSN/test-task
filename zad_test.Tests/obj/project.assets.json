@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net10.0": {
       "coverlet.collector/6.0.4": {
@@ -15,6 +15,25 @@
         },
         "runtime": {
           "lib/netstandard2.0/LasSharp.dll": {}
+        }
+      },
+      "LasZipNetStandard/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/LasZipNetStandard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/LasZipNetStandard.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/laszip64.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/win/native/laszip64.dll": {
+            "assetType": "native",
+            "rid": "win"
+          }
         }
       },
       "MathNet.Numerics/4.9.1": {
@@ -494,6 +513,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "LasSharp": "1.1.0",
+          "LasZipNetStandard": "1.1.0",
           "MathNet.Spatial": "0.6.0",
           "System.CommandLine": "3.0.0-preview.5.26302.115",
           "xunit": "2.9.3"
@@ -588,6 +608,21 @@
         "lassharp.1.1.0.nupkg.sha512",
         "lassharp.nuspec",
         "lib/netstandard2.0/LasSharp.dll"
+      ]
+    },
+    "LasZipNetStandard/1.1.0": {
+      "sha512": "gX5rqYGaRZvXqjyVVZYuk2uws5a/U/ZrxN5lGLRW41ame1Xfn3CeChaHRqTR5BZ7vXkm6Bx0soD4mdBjaOFP1w==",
+      "type": "package",
+      "path": "laszipnetstandard/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "laszipnetstandard.1.1.0.nupkg.sha512",
+        "laszipnetstandard.nuspec",
+        "lib/netstandard2.1/LasZipNetStandard.dll",
+        "runtimes/linux/native/laszip64.so",
+        "runtimes/win/native/laszip64.dll"
       ]
     },
     "MathNet.Numerics/4.9.1": {
@@ -1147,7 +1182,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "C:\\Users\\HARD PC\\RiderProjects\\zad_test\\zad_test\\zad_test.csproj": {
@@ -1170,7 +1204,6 @@
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {

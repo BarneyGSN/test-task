@@ -1,31 +1,24 @@
-﻿namespace zad_test.Geometry;
-using System.Numerics;
+﻿using MathNet.Spatial.Euclidean;
+namespace zad_test.Geometry;
+using System;
 public class CoordinateTransformer
 {
-    public Matrix4x4 globalToLocal (Vector3 p1, Vector3 p2, out float length)
+    public CoordinateSystem globalToLocal (Point3D p1, Point3D p2, out double length)
     {
-        Vector3 direction = p2 - p1;
-        length = direction.Length();
-        Vector3 uz = Vector3.Normalize(direction);
+        Vector3D axisZ = p1.VectorTo(p2);
+        length = axisZ.Length;
+        UnitVector3D zDirection = axisZ.Normalize();
 
-        Vector3 reference = MathF.Abs(uz.X) < 0.9f ? Vector3.UnitX : Vector3.UnitY;
-        Vector3 ux = Vector3.Cross(reference, uz);
-        Vector3 uy = Vector3.Cross(uz, ux);
-
-        Matrix4x4 rotation = new Matrix4x4(
-            ux.X, uy.X, uz.X, 0,
-            ux.Y, uy.Y, uz.Y, 0,
-            ux.Z, uy.Z, uz.Z, 0,
-            0, 0, 0, 1
-        );
+        Vector3D reference = Math.Abs(zDirection.X) < 0.9 ? new  Vector3D(1, 0, 0) : new Vector3D(0, 1, 0);
+        UnitVector3D xDirection = reference.CrossProduct(zDirection).Normalize();
+        UnitVector3D yDirection = xDirection.CrossProduct(zDirection);
         
-        Matrix4x4 translation = Matrix4x4.CreateTranslation(-p1);
-        return Matrix4x4.Multiply(translation, rotation);
+       var localToGlobalSystem = new CoordinateSystem (p1, xDirection, yDirection, zDirection);
+       return localToGlobalSystem.Invert();
     }
 
-    public Matrix4x4 LocalToGlobal(Matrix4x4 globalToLocal)
+    public CoordinateSystem LocalToGlobal(CoordinateSystem globalToLocal)
     {
-        Matrix4x4.Invert(globalToLocal, out Matrix4x4 localToGlobal);
-        return localToGlobal;
+        return globalToLocal.Invert();
     }
 }

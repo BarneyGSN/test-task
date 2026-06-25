@@ -1,18 +1,19 @@
-﻿using System.Numerics;
+﻿using MathNet.Spatial.Euclidean;
+
 namespace zad_test.Fitting;
 using zad_test.Models;
 
 public class RectangleFitting
 {
-    public FittingResult FitRectangle(List<Vector3> section)
+    public FittingResult FitRectangle(List<Point3D> section)
     {
-        float minX = float.MaxValue;
-        float maxX = float.MinValue;
-        float minY = float.MaxValue;
-        float maxY = float.MinValue;
+        double minX = double.MaxValue;
+        double maxX = double.MinValue;
+        double minY = double.MaxValue;
+        double maxY = double.MinValue;
         int n = section.Count;
-        float meanX = 0, meanY = 0;
         
+        double meanX = 0, meanY = 0;
         foreach (var p in section)
         {
             meanX += p.X;
@@ -22,11 +23,11 @@ public class RectangleFitting
         meanX /= n;
         meanY /= n;
 
-        float cXX = 0, cYY = 0, cXY = 0;
+        double cXX = 0, cYY = 0, cXY = 0;
         foreach (var p in section)
         {
-            float dx = p.X - meanX;
-            float dy = p.Y - meanY;
+            double dx = p.X - meanX;
+            double dy = p.Y - meanY;
             
             cXX += dx * dx;
             cYY += dy * dy;
@@ -37,20 +38,20 @@ public class RectangleFitting
         cYY /= n;
         cXY /= n;
 
-        float angle = 0.5f * MathF.Atan2(2 * cXY, cXX - cYY);
-        float cosA = MathF.Cos(-angle);
-        float sinA = MathF.Sin(-angle);
+        double angle = 0.5 * Math.Atan2(2 * cXY, cXX - cYY);
+        double cosA = Math.Cos(-angle);
+        double sinA = Math.Sin(-angle);
         
-        List <Vector2> rotatedPoints = new List<Vector2>();
+        List <Vector2D> rotatedPoints = new List<Vector2D>();
         foreach (var p in section)
         {
-            float dx = p.X - meanX;
-            float dy = p.Y - meanY;
+            double dx = p.X - meanX;
+            double dy = p.Y - meanY;
             
-            float rx = dx * cosA - dy * sinA;
-            float ry = dx * sinA + dx * sinA;
+            double rx = dx * cosA - dy * sinA;
+            double ry = dx * sinA + dy * cosA;
             
-            rotatedPoints.Add(new Vector2(rx, ry));
+            rotatedPoints.Add(new Vector2D(rx, ry));
         }
 
         foreach (var p in rotatedPoints)
@@ -75,7 +76,41 @@ public class RectangleFitting
                 maxY = p.Y;
             }
         }
-        float fittedWidth = maxX - minX;
-        float fittedHeight = maxY - minY;
+        double fittedWidth = maxX - minX;
+        double fittedHeight = maxY - minY;
+        
+        double rotCenterX = minX + fittedWidth / 2;
+        double rotCenterY = minY + fittedHeight / 2;
+
+        double cosA_inv = Math.Cos(angle);
+        double sinA_inv = Math.Sin(angle);
+        
+        double localCenterX = meanX + (rotCenterX * cosA_inv - rotCenterY * sinA_inv);
+        double localCenterY = meanY + (rotCenterX * sinA_inv + rotCenterY * cosA_inv);
+        
+        double sumSquaredErrors = 0;
+        foreach (var p in rotatedPoints)
+        {
+            double distToLeft = Math.Abs(p.X - minX);
+            double distToRight = Math.Abs(p.X - maxX);
+            double distToBottom = Math.Abs(p.Y - minY);
+            double distToTop = Math.Abs(p.Y - maxY);
+            
+            double minDist = Math.Min(Math.Min(distToLeft, distToRight), Math.Min(distToBottom, distToTop));
+            sumSquaredErrors += minDist * minDist;
+        }
+        double rmse = Math.Sqrt(sumSquaredErrors / n);
+
+        return new FittingResult
+        {
+            ElementType = "Rectangle",
+            Width = fittedWidth,
+            Height = fittedHeight,
+            Angle= angle,
+            CenterX = localCenterX,
+            CenterY = localCenterY,
+            Rmse = (float)rmse,
+            PointsCount = n
+        };
     } 
 }
