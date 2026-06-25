@@ -119,3 +119,6 @@ C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\obj\Debug\net10.0\refint\
 C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\obj\Debug\net10.0\zad_test.Tests.pdb
 C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\obj\Debug\net10.0\zad_test.Tests.genruntimeconfig.cache
 C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\obj\Debug\net10.0\ref\zad_test.Tests.dll
+C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\bin\Debug\net10.0\LasZipNetStandard.dll
+C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\bin\Debug\net10.0\runtimes\linux\native\laszip64.so
+C:\Users\HARD PC\RiderProjects\zad_test\zad_test.Tests\bin\Debug\net10.0\runtimes\win\native\laszip64.dll

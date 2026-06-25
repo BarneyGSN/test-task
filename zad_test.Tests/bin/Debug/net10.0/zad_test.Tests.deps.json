@@ -24,6 +24,26 @@
           }
         }
       },
+      "LasZipNetStandard/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.1/LasZipNetStandard.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/laszip64.so": {
+            "rid": "linux",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/native/laszip64.dll": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "MathNet.Numerics/4.9.1": {
         "runtime": {
           "lib/netstandard2.0/MathNet.Numerics.dll": {
@@ -410,6 +430,7 @@
       "zad_test/1.0.0": {
         "dependencies": {
           "LasSharp": "1.1.0",
+          "LasZipNetStandard": "1.1.0",
           "MathNet.Spatial": "0.6.0",
           "System.CommandLine": "3.0.0-preview.5.26302.115",
           "xunit": "2.9.3"
@@ -435,6 +456,13 @@
       "sha512": "sha512-5ig/zCtjcErQF0WJjcApRJlCRMuWhRzeSdphXIyfl9yJcA8t+tGUJwVUxNqi9BGnhD4cYYGWCMV2S/Po7jrNTg==",
       "path": "lassharp/1.1.0",
       "hashPath": "lassharp.1.1.0.nupkg.sha512"
+    },
+    "LasZipNetStandard/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gX5rqYGaRZvXqjyVVZYuk2uws5a/U/ZrxN5lGLRW41ame1Xfn3CeChaHRqTR5BZ7vXkm6Bx0soD4mdBjaOFP1w==",
+      "path": "laszipnetstandard/1.1.0",
+      "hashPath": "laszipnetstandard.1.1.0.nupkg.sha512"
     },
     "MathNet.Numerics/4.9.1": {
       "type": "package",
