@@ -4,7 +4,7 @@ Projekt dedykowany do automatycznej filtracji chmur punktów (w formatach `.las`
 
 System wykorzystuje zaawansowane transformacje macierzowe do przejścia między geodezyjnym układem współrzędnych a lokalnym układem odniesienia elementu konstrukcyjnego. Wycięte sekcje chmury są pasowane algorytmami geometrycznymi, a wyniki eksportowane do modeli trójwymiarowych `.obj` oraz raportów `.json`.
 
-## 🛠️ Wymagania Technologiczne
+## Wymagania Technologiczne
 
 * **Środowisko uruchomieniowe:** .NET 10.0 (C#)
 * **Biblioteki i pakiety NuGet:**
@@ -15,9 +15,9 @@ System wykorzystuje zaawansowane transformacje macierzowe do przejścia między 
 
 ---
 
-## 🚀 Instalacja i Uruchomienie
+## Instalacja i Uruchomienie
 
-Przed uruchomieniem upewnij się, że stoisz w terminalu w głównym folderze projektu (tam, gdzie znajduje się plik `.sln` oraz podfoldery `input` i `Results`).
+Przed uruchomieniem upewnij się, że znajdujesz się w terminalu w głównym folderze projektu (tam, gdzie znajduje się plik `.sln` oraz podfoldery `input` i `Results`).
 
 ### 1. Przygotowanie danych
 Stwórz strukturę folderów i umieść plik chmury w katalogu `input`:
