@@ -1,4 +1,4 @@
-# Automatyczny Filtr i Generator Obiektów 3D z Chmur Punktów (zad_test)
+# Automatyczny Filtr i Generator Obiektów 3D z Chmur Punktów
 
 Projekt dedykowany do automatycznej filtracji chmur punktów (w formatach `.las` oraz `.laz`) oraz automatycznego dopasowywania geometrii struktur masztowych (wsporników oraz rur montażowych). 
 
